@@ -16,3 +16,19 @@ img {
   display: block;
   max-width: 100%;
 }
+button {
+  font-size: 20px;
+  background-color: rgb(25, 175, 25);
+  color: white;
+  border-radius: 15px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+button.stop {
+  background-color: rgb(252, 38, 38);
+}
+button:disabled {
+  background-color: #746565;
+  cursor: not-allowed;
+}
