@@ -1,3 +1,5 @@
+import { Report } from 'notiflix/build/notiflix-report-aio';
+
 const refs = {
   buttonStart: document.querySelector('button[data-start]'),
   buttonStop: document.querySelector('button[data-stop]'),
@@ -21,7 +23,11 @@ function onStartButton() {
   refs.buttonStop.disabled = false;
 }
 function onStopButton() {
-  alert('Перемикач кольорів зупинено');
+  Report.info(
+    'Dear Friend',
+    'The color switcher is stopped, shall we continue?',
+    'Okay'
+  );
   clearInterval(timerId);
   refs.buttonStop.disabled = true;
   refs.buttonStart.disabled = false;

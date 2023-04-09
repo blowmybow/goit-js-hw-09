@@ -7,7 +7,7 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background-color: #ece5da;
   color: #212121;
   line-height: 1.5;
 }
@@ -16,7 +16,8 @@ img {
   display: block;
   max-width: 100%;
 }
-button {
+/* color-switcher CSS */
+.start-btn-switcher {
   font-size: 20px;
   background-color: rgb(25, 175, 25);
   color: white;
@@ -25,10 +26,74 @@ button {
   padding: 5px 10px;
   cursor: pointer;
 }
-button.stop {
-  background-color: rgb(252, 38, 38);
-}
-button:disabled {
+.start-btn-switcher:disabled {
   background-color: #746565;
   cursor: not-allowed;
+}
+.stop-btn-switcher {
+  font-size: 20px;
+  background-color: rgb(252, 38, 38);
+  color: white;
+  border-radius: 15px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.stop-btn-switcher:disabled {
+  background-color: #746565;
+  cursor: not-allowed;
+}
+
+/* timer CSS */
+input {
+  width: 200px;
+  height: 24px;
+  text-align: center;
+  color: #ef0747;
+  background: #f1ebe5;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 6px 8px #c4b59d, 0 -2px 1px #fff;
+}
+.timer-btn {
+  font-size: 14px;
+  border-radius: 50%;
+  border: none;
+  padding: 5px 10px;
+  width: 60px;
+  height: 60px;
+  box-shadow: inset 0 3px 4px #fff, inset 0 -3px 4px #c4b59d;
+  font-weight: 600;
+  cursor: pointer;
+  color: #ef0747;
+}
+.timer-btn:disabled {
+  background-color: #746565;
+  color: #0e0d10;
+  cursor: not-allowed;
+}
+
+.timer {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.value {
+  font-size: 50px;
+  font-weight: 700;
+  text-shadow: 0 6px 8px #c4b59d, 0 -3px 1px #fff;
+  letter-spacing: 4px;
+}
+.label {
+  text-shadow: 0 6px 8px #c4b59d, 0 -3px 1px #fff;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
